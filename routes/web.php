@@ -23,10 +23,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //Para pagar el index predeterminado 
-Route::get('/menuVer', 'MenuController@index')->name('ver');
+Route::get('/menuVer', 'MenuController@index')->name('ver-menu');
+Route::get('/menuAgr', 'MenuController@create')->name('agregar-menu');
 
-Route::resource('/menu','MenuController');
-
-//Route::get('/ver', 'MenuController@index');
-
-//Route::get('/agregar', 'MenuController@create');
+Route::resource('menu','MenuController');
+//Para devolver a la vista con el mensaje del evento
+Route::view('delMenu', 'menu.ver');
+Route::view('agrMenu', 'menu.agregar');

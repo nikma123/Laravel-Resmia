@@ -65,7 +65,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="agregar"
+                            <a href="{{route('agregar-menu')}}" 
                                 class="{{ Request::path() === 'agregar' ? 'nav-link active' : 'nav-link' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Registrar Menú</p>
@@ -87,7 +87,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="ver"
+                            <a href="{{route('ver-menu')}}"
                                 class="{{ Request::path() === 'ver' ? 'nav-link active' : 'nav-link' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Ver Menú</p>

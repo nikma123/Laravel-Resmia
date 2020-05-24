@@ -14,9 +14,8 @@ class MenuController extends Controller
      */
     public function index()
     {
-        return view('menu.ver');
+        return view('menu/ver');
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -35,9 +34,9 @@ class MenuController extends Controller
      */
     public function store(Request $request)
     {
-        $datoMenu=request()-> except('_token');
-
-        return response()->json($datoMenu);
+        $agrearMenu= request()->except('_token');
+        Menu::insert($agrearMenu);
+        return redirect('agrMenu')->with('status','Menu registrado con exito');
     }
 
     /**
@@ -80,8 +79,10 @@ class MenuController extends Controller
      * @param  \App\Menu  $menu
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Menu $menu)
+    public function destroy($id)
     {
-        //
+        
+        Menu::destroy($id);
+        return redirect('delMenu')->with('status','Se elimino con exito');
     }
 }

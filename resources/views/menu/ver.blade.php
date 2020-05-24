@@ -39,6 +39,9 @@ Listado Menu
                 <button class="btn btn-primary" type="submit" onclick="return confirm('Borrar')">Borrar</button>
               </form>
             </td>
+            <td>
+              <a href="{{ url('/menu/'.$menus->id.'/edit') }}">EDITAR</a>
+            </td>
           </tr>
           @endforeach
         </tbody>

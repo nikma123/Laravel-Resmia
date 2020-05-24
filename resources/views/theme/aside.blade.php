@@ -40,7 +40,7 @@
                 data-accordion="false">
 
                 <li class="nav-item">
-                    <a href="/" class="{{ Request::path() === '/' ? 'nav-link active' : 'nav-link' }}">
+                    <a href="/home" class="{{ Request::path() === '/home' ? 'nav-link active' : 'nav-link' }}">
                         <i class="nav-icon fas fa-home"></i>
                         <p>Inicio</p>
                     </a>
@@ -71,21 +71,6 @@
                                 <p>Registrar Menú</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="eliminar"
-                                class="{{ Request::path() === 'eliminar' ? 'nav-link active' : 'nav-link' }}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Eliminar Menú</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="modificar"
-                                class="{{ Request::path() === 'modificar' ? 'nav-link active' : 'nav-link' }}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Modificar Menú</p>
-                            </a>
-                        </li>
-
                         <li class="nav-item">
                             <a href="{{route('ver-menu')}}"
                                 class="{{ Request::path() === 'ver' ? 'nav-link active' : 'nav-link' }}">
